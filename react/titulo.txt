@@ -1,2 +1,0 @@
-creacion de Int-schedule.mo para programacion movil
-es una aplicacion desarrollada en  ""  con la utilizacion de  ""   para dispositivos moviles     
