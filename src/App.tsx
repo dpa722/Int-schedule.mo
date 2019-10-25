@@ -3,18 +3,18 @@ import { Redirect, Route } from 'react-router-dom';
 import {
   IonApp,
   IonIcon,
-  IonLabel,
   IonRouterOutlet,
   IonTabBar,
   IonTabButton,
   IonTabs
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { apps, flash, send, home, calendar, share, shareAlt, speedometer, clipboard } from 'ionicons/icons';
+import { home, calendar, share, clipboard } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
 import Tab4 from './pages/Tab4';
+import Login from './pages/Login';
 import Eventos from './pages/components/eventos';
 
 /* Core CSS required for Ionic components to work properly */
@@ -46,6 +46,7 @@ const App: React.FC = () => (
           <Route path="/components/eventos" component={Eventos} />
           <Route path="/tab3" component={Tab3} />
           <Route path="/tab4" component={Tab4} />
+          <Route path="/login" component={Login} />
           <Route exact path="/" render={() => <Redirect to="/tab1" />} />
         </IonRouterOutlet>
         <IonTabBar slot="bottom">

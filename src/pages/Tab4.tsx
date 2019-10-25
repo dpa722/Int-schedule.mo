@@ -1,6 +1,6 @@
 import React from 'react';
-import { IonHeader, IonToolbar, IonPage, IonTitle, IonContent, IonList, IonItem, IonLabel, IonButton, IonIcon } from '@ionic/react';
-import { share, expand, contract } from 'ionicons/icons';
+import { IonHeader, IonToolbar, IonPage, IonTitle, IonContent, IonButton, IonIcon } from '@ionic/react';
+import { expand, contract } from 'ionicons/icons';
 
 
 const Tab4Page: React.FC = () => {

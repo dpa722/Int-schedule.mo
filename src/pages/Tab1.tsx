@@ -4,7 +4,7 @@ import {
   IonListHeader,IonPage,IonTitle,IonToolbar
 } from '@ionic/react';
 
-import { book, build, colorFill, grid } from 'ionicons/icons';
+import { book } from 'ionicons/icons';
 import React from 'react';
 import './Tab1.css';
 
