@@ -18,7 +18,7 @@ import {
       console.log(data);
       if(data.length > 0){
           console.log("iniciado sesion");
-          console.log(data[0].id);
+          //window.location.href=("http://localhost:8100/tab1");
       }else{
         console.log("no se ha podido iniciar");
       }
