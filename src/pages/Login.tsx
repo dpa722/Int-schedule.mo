@@ -1,12 +1,29 @@
 import {
-    IonHeader, IonContent, IonToolbar, IonTitle,IonPage,IonCard,IonCardHeader,IonCardSubtitle,IonCardTitle,IonCardContent,IonInput,IonButton,IonLabel
+    IonHeader, IonContent, IonToolbar, IonTitle,IonPage,IonCard,IonCardHeader,IonCardSubtitle,IonCardTitle,IonCardContent,IonButton,IonLabel
   } from '@ionic/react';
   
-  import React from 'react';
+  import React,{ useState }  from 'react';
 
   import './Login.css';
-  
+
   const Login: React.FC = () => {
+   
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const submit = async () => {
+      const url = "https://afternoon-refuge-46845.herokuapp.com/api/getuser/"+email+"/"+password;
+      const result = await fetch(url);
+      const data = await result.json();
+      console.log(data);
+      if(data.length > 0){
+          console.log("iniciado sesion");
+          console.log(data[0].id);
+      }else{
+        console.log("no se ha podido iniciar");
+      }
+    };
+
     return (
         <IonPage>
             <IonHeader>
@@ -22,9 +39,9 @@ import {
                     <IonCardTitle>Iniciar Sesion</IonCardTitle>
                 </IonCardHeader>
                  <IonCardContent>
-                     <form action="">
-                        <IonInput type="text" placeholder="email..." className="email" name="email"></IonInput>
-                        <IonInput type="password" placeholder="password..." className="password" name="password"></IonInput>
+                     <form onSubmit={(e) => { e.preventDefault(); submit();}}>
+                        <input onChange={(e) => setEmail(e.target.value)} type="email" placeholder="email..." className="email" name="email" required></input>
+                        <input onChange={(e) => setPassword(e.target.value)} type="password" placeholder="password..." className="password" name="password" required></input>
                         <IonButton type="submit" expand="block" className="submit">iniciar sesion</IonButton>
                      </form>
                      <div className="registro">
