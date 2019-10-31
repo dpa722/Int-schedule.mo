@@ -4,9 +4,10 @@ import {
   IonListHeader,IonPage,IonTitle,IonToolbar
 } from '@ionic/react';
 
-import { book} from 'ionicons/icons';
+import {book} from 'ionicons/icons';
 import React from 'react';
 import './Tab1.css';
+import Footer from './components/Footer';
 
 const Tab1: React.FC = () => {
 
@@ -42,8 +43,11 @@ const Tab1: React.FC = () => {
 
         </IonList>
       </IonContent>
+      <Footer>
+      </Footer>
     </IonPage>
   );
-};
+
+}
 
 export default Tab1;

@@ -1,3 +1,7 @@
+.pagina{
+    width: 90%;
+    height: 90%;
+}
 .email, .password{
     width: 100%;
     border: none;
