@@ -1,0 +1,31 @@
+
+.tituloLogin{
+    text-align: center;
+}
+
+.pagina{
+    margin-top: 20vh;
+    margin-bottom: 5vh;
+}
+.email, .password , .name{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+    color: black;
+    padding: 10px;
+    margin: 10px;
+}
+
+.submit{
+    margin-top: 20px;
+}
+
+.crear{
+    text-align: center;
+    align-content: center;
+}
+
+.paginaCrear{
+    margin-top: 30vh;
+    margin-bottom: 5vh;
+}

@@ -1,5 +1,7 @@
 {
   "name": "Int-schedule.mo",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "react"
 }

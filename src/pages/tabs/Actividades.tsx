@@ -1,7 +1,10 @@
 import React from 'react';
 import { IonHeader, IonToolbar, IonPage, IonTitle, IonContent, IonList, IonItem, IonLabel } from '@ionic/react';
 
-const Tab3Page: React.FC = () => {
+import './tabs.css';
+import Footer from './components/Footer';
+
+const Actividades: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
@@ -20,10 +23,11 @@ const Tab3Page: React.FC = () => {
           </IonItem>
         </IonList>
 
-
+        
       </IonContent>
+      <Footer></Footer>
     </IonPage>
   );
 };
 
-export default Tab3Page;
+export default Actividades;

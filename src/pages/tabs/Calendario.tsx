@@ -1,14 +1,15 @@
-import {
-  IonCard,IonCardContent,IonCardHeader,IonCardSubtitle,IonCardTitle,
-  IonContent,IonHeader,IonIcon,IonItem,IonLabel,IonList,
-  IonListHeader,IonPage,IonTitle,IonToolbar
-} from '@ionic/react';
+import {IonCard,IonCardContent,IonCardHeader,IonCardSubtitle,IonCardTitle,
+        IonContent,IonHeader,IonIcon,IonItem,IonLabel,IonList,
+        IonListHeader,IonPage,IonTitle,IonToolbar } from '@ionic/react';
 
-import { book, build, colorFill, grid } from 'ionicons/icons';
+import {book} from 'ionicons/icons';
 import React from 'react';
-import './Tab1.css';
 
-const Tab1: React.FC = () => {
+import './tabs.css';
+import Footer from './components/Footer';
+
+const Calendario: React.FC = () => {
+
   return (
     <IonPage>
       <IonHeader>
@@ -41,8 +42,11 @@ const Tab1: React.FC = () => {
 
         </IonList>
       </IonContent>
+      <Footer>
+      </Footer>
     </IonPage>
   );
-};
 
-export default Tab1;
+}
+
+export default Calendario;

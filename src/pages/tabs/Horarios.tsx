@@ -1,7 +1,10 @@
 import React from 'react';
-import { IonContent, IonHeader, IonItem, IonLabel, IonList, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 
-const Tab2: React.FC = () => {
+import './tabs.css';
+import Footer from './components/Footer';
+
+const horarios: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
@@ -23,9 +26,12 @@ const Tab2: React.FC = () => {
           onIonScrollEnd={() => {}}>
         </IonContent>
 
+
+        
       </IonContent>
+      <Footer></Footer>
     </IonPage>
   );
 };
 
-export default Tab2;
+export default horarios;
