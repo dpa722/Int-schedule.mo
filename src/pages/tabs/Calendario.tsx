@@ -42,8 +42,7 @@ const Calendario: React.FC = () => {
 
         </IonList>
       </IonContent>
-      <Footer>
-      </Footer>
+      <Footer></Footer>
     </IonPage>
   );
 

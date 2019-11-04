@@ -11,10 +11,10 @@ const INITIAL_STATE = {photo: '',};
 export class CopiaHorario extends Component {
 
   state: any = {};
-  props: any = {};
-  constructor(props: any) {
+ 
+  constructor(props: any, state: any) {
     super(props);
-    this.state = { ...INITIAL_STATE };
+    state = {INITIAL_STATE }; //falta colocar lo del lector pero no agarra el constroctor, en el gnx 
   }
 
   async takePicture() {
@@ -24,22 +24,14 @@ export class CopiaHorario extends Component {
     resultType: CameraResultType.Uri
     });
     var imageUrl = image.webPath;
-    // Can be set to the src of an image now
-    this.setState({
-    photo: imageUrl
-    })
-    }
+    this.setState({photo: imageUrl})
+  }
 
 
   render() {
     const { photo } = this.state;
     return (
       <IonPage>
-        <IonHeader>
-          <IonToolbar>
-            <IonTitle>Ionic Blank</IonTitle>
-          </IonToolbar>
-        </IonHeader>
         <IonContent className="ion-padding">
           <IonImg style={{ 'border': '1px solid black', 'minHeight': '100px' }} src={photo} ></IonImg>
           <IonFab color="primary" vertical="bottom" horizontal="center" slot="fixed">

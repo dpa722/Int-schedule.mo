@@ -4,20 +4,6 @@ import { IonButtons, IonHeader, IonPage, IonToolbar, IonTitle, IonContent, IonBa
 
 const CompartirHorario: React.FC = () => {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   return (
     <IonPage>
       <IonHeader>
@@ -29,9 +15,6 @@ const CompartirHorario: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent>
-
-
-
         
       </IonContent>
     </IonPage>
