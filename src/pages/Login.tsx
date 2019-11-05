@@ -15,11 +15,10 @@ import {
       const url = "https://afternoon-refuge-46845.herokuapp.com/api/getuser/"+email+"/"+password;
       const result = await fetch(url);
       const data = await result.json();
-      console.log(data);
       if(data.length > 0){
           window.location.href=("/tab1");
       }else{
-        console.log("no se ha podido iniciar");
+        alert("No se ha podido iniciar sesión");
       }
 
     };
@@ -46,7 +45,7 @@ import {
                         </form>
                         <div className="registro">
                             <IonLabel className="labelCuenta">Usted ya tiene una cuenta en Schedule?</IonLabel>
-                            <IonButton expand="block" color="secondary">Crear Cuenta</IonButton>
+                            <IonButton expand="block" color="secondary" href = "/createUser">Crear Cuenta</IonButton>
                         </div>
                     </IonCardContent>
                 </IonCard>
