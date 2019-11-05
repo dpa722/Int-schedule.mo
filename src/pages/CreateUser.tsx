@@ -1,5 +1,5 @@
 import {
-    IonAlert,IonHeader, IonContent, IonToolbar, IonTitle,IonPage,IonCard,IonCardHeader,IonCardSubtitle,IonCardTitle,IonCardContent,IonButton
+    IonHeader, IonContent, IonToolbar, IonTitle,IonPage,IonCard,IonCardHeader,IonCardSubtitle,IonCardTitle,IonCardContent,IonButton
   } from '@ionic/react';
   
 import React,{useState}  from 'react';
@@ -10,7 +10,6 @@ import './CreateUser.css';
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [name,setName] = useState('');
-    const [showAlert, setShowAlert] = useState(true);
 
     const handleSubmit = async () => {
       const url = 'https://afternoon-refuge-46845.herokuapp.com/api/users';
