@@ -1,26 +1,29 @@
 import React from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonToolbar, IonButton, IonIcon, IonTitle } from '@ionic/react';
+import { add } from 'ionicons/icons';
 
 const Tab2: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <br/>
-          <IonTitle>lista de horarios</IonTitle>
+          <IonTitle>Lista de Horarios</IonTitle>
+          <IonButton color="light" slot="end" href="/createSchedule/1">
+            <IonIcon icon={add}></IonIcon>
+          </IonButton>
         </IonToolbar>
       </IonHeader>
       <IonContent>
 
-        
-        
 
 
-        <IonContent color="dark"
+
+
+        <IonContent
           scrollEvents={true}
-          onIonScrollStart={() => {}}
-          onIonScroll={() => {}}
-          onIonScrollEnd={() => {}}>
+          onIonScrollStart={() => { }}
+          onIonScroll={() => { }}
+          onIonScrollEnd={() => { }}>
         </IonContent>
 
       </IonContent>
