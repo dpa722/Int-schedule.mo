@@ -1,28 +1,33 @@
 import {
-  IonCard,IonCardContent,IonCardHeader,IonCardSubtitle,IonCardTitle,
-  IonContent,IonHeader,IonIcon,IonItem,IonLabel,IonList,
-  IonListHeader,IonPage,IonTitle,IonToolbar
+  IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle,
+  IonContent, IonHeader, IonIcon, IonItem, IonLabel, IonList,
+  IonListHeader, IonPage, IonTitle, IonToolbar, IonButton
 } from '@ionic/react';
 
-import {book} from 'ionicons/icons';
+import { book, add } from 'ionicons/icons';
 import React from 'react';
 import './Tab1.css';
 import Footer from './components/Footer';
 
-const Tab1: React.FC = () => {
+const Tab1: React.FC = (props: any) => {
+
+  const { history } = props;
 
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <br/>
-          <IonTitle>HORARIOS</IonTitle>
+          <br />
+          <IonTitle>calendario {props.match.params.idcalendar}</IonTitle>
+          <IonButton color="light" slot="end" onClick={() => history.push(`/createSchedule/${props.match.params.iduser}`)}>
+            <IonIcon icon={add}></IonIcon>
+          </IonButton>
         </IonToolbar>
       </IonHeader>
       <IonContent>
         <IonCard className="welcome-card">
           <IonCardHeader>
-            <IonCardSubtitle>comienzo 1</IonCardSubtitle>
+            <IonCardSubtitle>usuario: {props.match.params.iduser}</IonCardSubtitle>
             <IonCardTitle>creacion de horario</IonCardTitle>
           </IonCardHeader>
           <IonCardContent>

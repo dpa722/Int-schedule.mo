@@ -41,8 +41,8 @@ const App: React.FC = () => {
       <IonReactRouter>
 
         <IonRouterOutlet>
-          <Route path="/tab1" component={Tab1} exact={true} />
-          <Route path="/tab2" component={Tab2} exact={true} />
+          <Route path="/tab1/:iduser?/:idcalendar?" component={Tab1} exact={true} />
+          <Route path="/tab2/:iduser?" component={Tab2} exact={true} />
           <Route path="/components/eventos" component={Eventos} />
           <Route path="/tab3" component={Tab3} />
           <Route path="/tab4" component={Tab4} />

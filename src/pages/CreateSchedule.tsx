@@ -21,9 +21,8 @@ const CreateSchedule: React.FC = (props: any) => {
             })
         });
         const data = await result.json();
-        console.log(data);
         if (data.user_id === props.match.params.iduser) {
-            window.location.href = ("/tab2");
+            window.location.href = (`/tab2/${props.match.params.iduser}`);
         } else {
             alert("no se pudo crear el calendario");
             window.location.href = (`/createSchedule/${props.match.params.iduser}`);

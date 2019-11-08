@@ -16,7 +16,7 @@ const Login: React.FC = () => {
         const result = await fetch(url);
         const data = await result.json();
         if (data.length > 0) {
-            window.location.href = ("/tab1");
+            window.location.href = (`/tab1/${data[0].id}/0`);
         } else {
             console.log("no se ha podido iniciar");
         }
