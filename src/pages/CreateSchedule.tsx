@@ -7,7 +7,7 @@ const CreateSchedule: React.FC = (props: any) => {
     const [description, setDescription] = useState('');
 
     const handleSubmit = async () => {
-        const url = "https://afternoon-refuge-46845.herokuapp.com/api/schedules";
+        const url = 'https://afternoon-refuge-46845.herokuapp.com/api/schedules';
         const result = await fetch(url, {
             method: 'post',
             headers: {
@@ -17,18 +17,18 @@ const CreateSchedule: React.FC = (props: any) => {
             body: JSON.stringify({
                 name: name,
                 description: description,
-                user_id: 1
+                user_id: props.match.params.iduser
             })
         });
         const data = await result.json();
         console.log(data);
-        if (data > 0) {
+        if (data.user_id === props.match.params.iduser) {
             window.location.href = ("/tab2");
         } else {
             alert("no se pudo crear el calendario");
-            window.location.href = ("/createSchedule/1")
-        }
+            window.location.href = (`/createSchedule/${props.match.params.iduser}`);
 
+        }
     };
 
     return (
