@@ -1,36 +1,36 @@
 import {
-    IonHeader, IonContent, IonToolbar, IonTitle,IonPage,IonCard,IonCardHeader,IonCardSubtitle,IonCardTitle,IonCardContent,IonButton,IonLabel
-  } from '@ionic/react';
-  
-  import React,{useState}  from 'react';
+    IonHeader, IonContent, IonToolbar, IonTitle, IonPage, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonLabel
+} from '@ionic/react';
 
-  import './Login.css';
+import React, { useState } from 'react';
 
-  const Login: React.FC = () => {
-    
+import './Login.css';
+
+const Login: React.FC = () => {
+
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-     const handleSubmit = async () => {
-      const url = "https://afternoon-refuge-46845.herokuapp.com/api/getuser/"+email+"/"+password;
-      const result = await fetch(url);
-      const data = await result.json();
-      if(data.length > 0){
-          window.location.href=("/tab1");
-      }else{
-        alert("No se ha podido iniciar sesión");
-      }
+    const handleSubmit = async () => {
+        const url = "https://afternoon-refuge-46845.herokuapp.com/api/getuser/" + email + "/" + password;
+        const result = await fetch(url);
+        const data = await result.json();
+        if (data.length > 0) {
+            window.location.href = (`/tab1/${data[0].id}/0`);
+        } else {
+            console.log("no se ha podido iniciar");
+        }
 
     };
-  
-        return (
-            <IonPage >
-                <IonHeader>
-                    <IonToolbar>
-                        <IonTitle>Login</IonTitle>
-                    </IonToolbar>
-                </IonHeader>
-                <IonContent>
+
+    return (
+        <IonPage >
+            <IonHeader>
+                <IonToolbar>
+                    <IonTitle>Login</IonTitle>
+                </IonToolbar>
+            </IonHeader>
+            <IonContent>
 
                 <IonCard className="pagina">
                     <IonCardHeader>
@@ -38,7 +38,7 @@ import {
                         <IonCardTitle>Iniciar Sesion</IonCardTitle>
                     </IonCardHeader>
                     <IonCardContent>
-                        <form onSubmit={(e) => { e.preventDefault(); handleSubmit();}}>
+                        <form onSubmit={(e) => { e.preventDefault(); handleSubmit(); }}>
                             <input onChange={(e) => setEmail(e.target.value)} type="email" placeholder="email..." className="email" name="email" required></input>
                             <input onChange={(e) => setPassword(e.target.value)} type="password" placeholder="password..." className="password" name="password" required></input>
                             <IonButton type="submit" expand="block" className="submit">iniciar sesion</IonButton>
@@ -50,10 +50,9 @@ import {
                     </IonCardContent>
                 </IonCard>
             </IonContent>
-          </IonPage>
-        );
-    
-  }
-  
-  export default Login;
-  
+        </IonPage>
+    );
+
+}
+
+export default Login;
