@@ -11,6 +11,7 @@ import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
 import Tab4 from './pages/Tab4';
 import Login from './pages/Login';
+import CreateUser from './pages/CreateUser';
 import Eventos from './pages/components/eventos';
 import CreateSchedule from './pages/CreateSchedule';
 

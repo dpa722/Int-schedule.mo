@@ -45,7 +45,7 @@ const Login: React.FC = () => {
                         </form>
                         <div className="registro">
                             <IonLabel className="labelCuenta">Usted ya tiene una cuenta en Schedule?</IonLabel>
-                            <IonButton expand="block" color="secondary">Crear Cuenta</IonButton>
+                            <IonButton expand="block" color="secondary" href = "/createUser">Crear Cuenta</IonButton>
                         </div>
                     </IonCardContent>
                 </IonCard>
