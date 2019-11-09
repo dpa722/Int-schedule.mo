@@ -1,0 +1,12 @@
+.footer {
+  background-color: #f5f6f9;
+}
+.columna,
+.fila,
+.icono {
+  margin: 0.5px;
+  padding: 0;
+}
+.icono {
+  font-size: 19px;
+}
