@@ -1,32 +1,51 @@
 import React from 'react';
+
 import {
-  IonToolbar,
   IonButton,
   IonIcon,
-  IonFooter
+  IonFooter,
+  IonGrid,
+  IonRow,
+  IonCol
 } from '@ionic/react';
 import './Footer.css';
 import { home, calendar, share, clipboard } from 'ionicons/icons';
+import { Link } from 'react-router-dom';
 
-const Footer: React.FC = () => {
-    return(
-      <IonFooter>
-      <IonToolbar>
-            <IonButton size="large" color="tertiary">
-              <IonIcon icon={home}/>
+type Props = {
+  user: string,
+  calendar: string,
+}
+const Footer: React.FC<Props> = (props: any) => {
+
+  return (
+    <IonFooter>
+      <IonGrid>
+        <IonRow>
+          <IonCol>
+            <IonButton href={"/tab1/" + props.user + "/" + props.calendar} expand="block" color="primary">
+              <IonIcon icon={home} />
             </IonButton>
-            <IonButton size="large">
-              <IonIcon icon={calendar}/>
+          </IonCol>
+          <IonCol>
+            <IonButton href={"/tab2/" + props.user} expand="block" color="success">
+              <IonIcon icon={calendar} />
             </IonButton>
-            <IonButton size="large">
-              <IonIcon icon={clipboard}/>
+          </IonCol>
+          <IonCol>
+            <IonButton href="/tab3" expand="block" color="tertiary">
+              <IonIcon icon={clipboard} />
             </IonButton>
-            <IonButton size="large">
-              <IonIcon icon={share}/>
+          </IonCol>
+          <IonCol>
+            <IonButton href="/tab4" expand="block" color="danger">
+              <IonIcon icon={share} />
             </IonButton>
-      </IonToolbar>
+          </IonCol>
+        </IonRow>
+      </IonGrid>
     </IonFooter>
-    );
+  );
 }
 export default Footer;
-  
+

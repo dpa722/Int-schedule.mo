@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { IonContent, IonHeader, IonPage, IonToolbar, IonButton, IonIcon, IonTitle, IonList, IonItem, IonLabel } from '@ionic/react';
 import { add } from 'ionicons/icons';
 import './Tab2.css';
+import Footer from './components/Footer';
 
 const Tab2: React.FC = (props: any) => {
 
@@ -48,6 +49,7 @@ const Tab2: React.FC = (props: any) => {
           {calendarList}
         </IonList>
       </IonContent>
+      <Footer user={props.match.params.iduser} calendar="0" />
     </IonPage>
   );
 };

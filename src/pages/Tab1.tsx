@@ -47,7 +47,7 @@ const Tab1: React.FC = (props: any) => {
           </IonItem>
         </IonList>
       </IonContent>
-      <Footer />
+      <Footer user={props.match.params.iduser} calendar={props.match.params.idcalendar} />
     </IonPage>
   );
 
