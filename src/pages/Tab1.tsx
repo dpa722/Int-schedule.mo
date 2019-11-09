@@ -45,11 +45,9 @@ const Tab1: React.FC = (props: any) => {
             <IonIcon slot="start" color="medium" icon={book} />
             <IonLabel>Lista de Eventos Pendientes</IonLabel>
           </IonItem>
-
         </IonList>
       </IonContent>
-      <Footer>
-      </Footer>
+      <Footer />
     </IonPage>
   );
 

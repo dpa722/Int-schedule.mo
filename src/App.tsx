@@ -39,7 +39,6 @@ const App: React.FC = () => {
 
     <IonApp>
       <IonReactRouter>
-
         <IonRouterOutlet>
           <Route path="/tab1/:iduser?/:idcalendar?" component={Tab1} exact={true} />
           <Route path="/tab2/:iduser?" component={Tab2} exact={true} />
@@ -50,7 +49,6 @@ const App: React.FC = () => {
           <Route path="/createSchedule/:iduser" component={CreateSchedule} />
           <Route exact path="/" render={() => <Redirect to="/login" />} />
         </IonRouterOutlet>
-
       </IonReactRouter>
     </IonApp>
   );
