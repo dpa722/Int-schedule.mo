@@ -10,7 +10,7 @@ import {
 } from '@ionic/react';
 import './Footer.css';
 import { home, calendar, share, clipboard } from 'ionicons/icons';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
 type Props = {
   user: string,
